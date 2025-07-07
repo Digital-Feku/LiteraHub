@@ -1,13 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
     <script src="/scripts/main.js"></script>
-    <title>Document</title>
+    <title>LiteraHub</title>
 </head>
 <body>
-    <button onclick="redirect('/pages/auth.html')">Войти</button>
+    <header>
+        <img src="../images/back-header.png" class="header-bg">
+        <div class="logo">
+            <img src="../images/logo.svg">
+        </div>
+        <nav class="top-menu">
+            <ul>
+                <li><a href="#">Поиск</a></li>
+                <li><a href="#">Каталог</a></li>
+                <li>Настройки</li>
+                <li>
+                    <button onclick="redirect('/pages/auth.html')">Войти</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+            <h1>Виртуальная<br>книжная полка</h1>
+            <h2>Книги способны изменить мир, и наше<br> приложение поможет вам на этом<br> пути.</h2>
+    </section>
+    <section class="adv">
+        <h2>Преимущества</h2>
+        <div class="adv-info">
+            <div class="cards-row">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="../images/1.png" alt="">
+                    </div>
+                </div>
+                <div class="card-content">
+                        <h3>Заметки</h3>
+                        <p>Возможность делать<br> заметки и выделять важные<br> моменты в текстах.</p>
+                    </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="../images/2.png" alt="">
+                    </div>
+                </div>
+                <div class="card-content">
+                        <h3>Рекомендации</h3>
+                        <p>Персонализированные<br> рекомендации для поиска новых произведений.</p>
+                    </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="../images/3.png" alt="">
+                    </div>
+                </div>
+                <div class="card-content">
+                        <h3>Сообщество</h3>
+                        <p>Общение с единомышленниками и обмен<br> мнениями о прочитанном.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="popular">
+        <img src="../images/front.png" class="popular-bg">
+        <h2>Популярное сейчас</h2>
+        <div class="books">
+            <div class="book-1 book">
+
+            </div>
+            <div class="book-2 book">
+
+            </div>
+            <div class="book-3 book">
+
+            </div>
+        </div>
+    </section>
+    <section class="reg">
+        <div class="text">
+            <h2>Присоединение к сообществу</h2>
+            <p>Платформа предлагает уникальные<br> возможности для взаимодействия и<br> обмена опытом с другими<br> любителями литературы. Участие в<br> сообществе открывает доступ к<br> новым идеям и вдохновению.</p>
+        </div>    
+        <div class="foot-card">
+            <div class="foot-img">
+                <img src="../images/4.png" alt="">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="social-links">
+            <a href="#" target="_blank" aria-label="Email">
+                <img src="../images/Vector.svg" alt="">
+            </a>
+            <a href="#" target="_blank" aria-label="Telegram">
+                <img src="../images/Vector2.svg" alt="">
+            </a>
+            <a href="#" target="_blank" aria-label="VK">
+                <img src="../images/Vector3.svg" alt="">
+            </a>
+        </div>
+    </footer>
+    
 </body>
 </html>
