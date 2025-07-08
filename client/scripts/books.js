@@ -2,7 +2,7 @@
 async function getFromGoogle(title) {
     try {
         const responseGoogle = await fetch(
-            `https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(title)}&langRestrict=ru`
+            `https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(title)}+lang:ru&langRestrict=ru`
         )
         const dataGoogle = await responseGoogle.json()
         if (dataGoogle) {
@@ -28,17 +28,45 @@ async function getFromGoogle(title) {
     }
 }
 
-getPopularBooks('fiction').then( books => {
-    console.log(books)
-})
-
 //Получение популярных книг 
 
-async function getPopularBooks(category = "fiction") {
+async function getPopularBooks(count) {
+    try {
   const response = await fetch(
-    `https://www.googleapis.com/books/v1/volumes?q=subject:${category}&orderBy=newest&maxResults=20&langRestrict=ru&key=AIzaSyCLID0PjuG3JwDLr33ZWwj-bQUiAZ38kRY`
+    `https://www.googleapis.com/books/v1/volumes?q=subject:fiction&langRestrict=en&keyes&key=AIzaSyCLID0PjuG3JwDLr33ZWwj-bQUiAZ38kRY`
   );
-  const data = await response.json();
-  const books = data.items.volumeInfo
-  
+
+        if (!response.ok) {
+        throw new Error(`Ошибка запроса: ${response.status}`);
+        }
+
+    const data = await response.json();
+
+    if (!data.items || data.items.length === 0) {
+        console.log("Книги не найдены");
+        return;
+        }
+for (let i = 0; i < count; i++) {
+
+     const book = await data.items[i].volumeInfo 
+        const books = {
+        id: data.items[i].id,
+        title: book.title,
+        authors: book.authors || ["Автор неизвестен"],
+      };
+      console.log(books)
+
 }
+   
+
+} catch (error) {
+    console.error("Ошибка при получении книг:", error);
+    return [];
+  }
+}
+
+// getFromGoogle('fight club').then(book => {
+//     console.log(book)
+// })
+
+getPopularBooks(3)
