@@ -208,6 +208,16 @@ h3{
     height: 80px;
     font-size: 32px;
 }
+.popular-image {
+    margin-top: 63px;
+    width: 200px;
+    height: 300px;
+    background: white;
+}
+.popular-image-2 {
+    width: 228px;
+    height: 356px;
+}
 .books {
     display: flex;
     justify-content: center; 
