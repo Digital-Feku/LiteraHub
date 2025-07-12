@@ -1,9 +1,12 @@
-const express = require('express')
-const path = require('path')
+import express from 'express'
+import path from 'path'
+import { fileURLToPath } from 'url';
 const app = express()
 const PORT = 3000
 
-const clientPath = path.join(__dirname, "..", 'client');
+const clientPath = path.join(path.dirname(fileURLToPath(import.meta.url)), 
+  '..', 
+  'client');
 
 app.use(express.static(clientPath));
 
