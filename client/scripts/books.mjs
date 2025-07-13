@@ -47,9 +47,6 @@ export async function getRecommendations(count) {
       })
     } catch (error) {
         console.log('Ошибка получения рекомендаций:', error)
-        return null
+        return [];
     }
 }
-    getRecommendations(3).then(book => {
-        console.log(book)
-    })

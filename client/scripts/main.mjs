@@ -7,19 +7,19 @@ document.querySelector('button').addEventListener('click', () => {
 });
 
 async function init() {
-    console.log('Запуск init...'); // Отладочное сообщение
     
     try {
+        const popularBooksImages = document.querySelectorAll('.popular-image')
         const recommendations = await getRecommendations(3);
-        console.log('Рекомендации:', recommendations); // Отладочное сообщение
 
-        if (!recommendations || recommendations.length === 0) {
+        if (recommendations.length === 0) {
             console.log('Рекомендации не найдены');
             return;
         }
+        for (let i = 0; i < 3; i++) {
+        popularBooksImages[i].style.background = `url('${recommendations[i].image}')`
+        }
 
-        const firstBookTitle = recommendations[0].title;
-        console.log('Название первой книги:', firstBookTitle);
         
     } catch (error) {
         console.error('Ошибка в init:', error);
