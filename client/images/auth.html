@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/auth.css">
-    <script src="/scripts/main.mjs" type="module"></script>
+    <script src="/scripts/main.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -34,16 +34,17 @@
         </div>
     </div>
     <div class="wrapper">
-        <h1>Войти</h1>
+        <h1>Регистрация</h1>
         <div class="background">
             <form action="">
                 <div class="input-box">
                     <input type="email" placeholder="Почта" required>
                     <input type="password" placeholder="Пароль" required>
+                    <input type="password" placeholder="Подтверждение пароля" required>
                 </div>
                 <div class="button-box">
-                    <button type="submit" >Войти</button>
-                    <button type="button" onclick="redirect('/pages/reg.html')">Нет аккаунта</button>
+                    <button type="submit" class="btn">Зарегистрироваться</button>
+                    <button onclick="redirect('/pages/auth.html')">Уже есть аккаунт</button>
                 </div>
             </form>
         </div>
