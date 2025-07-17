@@ -1,15 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/auth.css">
     <script src="/scripts/main.mjs" type="module"></script>
     <title>Document</title>
 </head>
 <body>
-    <input class="login" type="text">
-    <input class="pass" type="text">
-    <button>Войти</button>
-    <button onclick="redirect('/pages/reg.html')">Нет аккаунта</button>
+    
+    <header>
+        <img src="../images/back-header2.svg" class="header-bg">
+        <div class="logo">
+            <img src="../images/logo.svg">
+        </div>
+        <nav class="top-menu">
+            <ul>
+                <li><a href="#">Поиск</a></li>
+                <li><a href="#">Каталог</a></li>
+                <li>Настройки</li>
+                <li>
+                    <button onclick="redirect('/pages/auth.html')">Войти</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="background-1">
+        <div class="back-reg1">
+            <img src="../images/back-reg.svg" alt="">
+        </div>
+        <div class="back-reg2">
+            <img src="../images/back-reg2.svg" class="back-reg2">
+        </div>
+    </div>
+    <div class="wrapper">
+        <h1>Войти</h1>
+        <div class="background">
+            <form action="">
+                <div class="input-box">
+                    <input type="email" placeholder="Почта" required>
+                    <input type="password" placeholder="Пароль" required>
+                </div>
+                <div class="button-box">
+                    <button type="submit" >Войти</button>
+                    <button type="button" onclick="redirect('/pages/reg.html')">Нет аккаунта</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="background-2">
+        <div class="back-reg3">
+            <img src="../images/back-reg3.svg" alt="">
+        </div>
+        <div class="back-reg4">
+            <img src="../images/back-reg4.svg" class="back-reg2">
+        </div>
+    </div>
 </body>
 </html>

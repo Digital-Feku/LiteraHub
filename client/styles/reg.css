@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    color: #453938;
+    background-color: #FEEFCF;
+    width: 100%;
+    max-width: 1920px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+a{
+    text-decoration: none;
+    color: #453938;
+}
+h1{
+    font-size: 48px;
+    margin-top: 104px;
+}
+header {
+    padding-bottom: 47px;
+    height: 100px;
+    width: 100%; 
+    max-width: 1920px; 
+    margin-top: 14px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding-left: 29px;
+    padding-right: 20px; 
+    box-sizing: border-box; 
+    
+    
+}
+.header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+    width: 100%;
+    max-width: 1920px;
+}
+
+.logo {
+    width: 61px;
+    height: 54px;
+    flex-shrink: 0; 
+    cursor: pointer;
+    z-index: 1;
+}
+.top-menu {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    right: 0;
+}
+
+.top-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; 
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.top-menu li {
+    display: flex;
+    white-space: nowrap; 
+    align-items: center;
+    cursor: pointer;
+}
+.top-menu button {
+    transition: background 0.3s ease;
+    background: transparent;
+    width: 154px;
+    height: 54px;
+    border-radius: 15px;
+    font-size: 20px;
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    color: #453938;
+    cursor: pointer;
+    border: 3px solid #453938;
+    
+}
+.top-menu button:hover {
+    background: rgba(69, 57, 56, 0.1); 
+}
+.top-menu button:active {
+    background: rgba(69, 57, 56, 0.2);
+}
+.background-1 {
+    position: absolute;
+    top: 147px;
+    left: 0; 
+    right: 0; 
+    display: flex;
+    justify-content: space-between; 
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto; 
+    
+}
+.back-reg1{
+    padding: 0 164px;
+}
+.background-2 {
+    position: absolute;
+    top: 537px;
+    left: 0; 
+    right: 0; 
+    display: flex;
+    justify-content: space-between; 
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto; 
+    overflow: visible;
+}
+.back-reg4{
+    padding-right: 151px;
+    padding-top: 61px;
+}
+.wrapper{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+}
+.background{
+    margin-top: 42px;
+    width: 628px;
+    background: #FFF;
+    height: 409px;
+    border-radius: 15px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 385px;
+    background: #F2DC9F;
+    width: 604px;
+    margin: auto;
+    margin-top: 12px;
+    border-radius: 15px;
+}
+.input-box{
+    display: flex;
+    flex-direction: column;
+    gap:22px;
+    padding-top: 52px;
+    padding-left: 
+}
+input{
+    background-color: #E3C384;
+    border-radius: 15px;
+    border: none;
+    width: 500px;
+    height: 55px;
+    font-size: 20px;
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    text-indent: 21px;
+    
+}
+.button-box{
+    margin-top: 22px;
+    display: flex;
+    gap: 15px;
+    width: 500px;
+}
+.button-box button {
+    height: 50px;
+    border-radius: 15px;
+    background: #F0C677;
+    border: none;
+    width: 200px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    color: #453938;
+    font-size: 16px;
+    
+}
+.button-box button:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+.button-box button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+    transition: all 0.2s ease;
+}
