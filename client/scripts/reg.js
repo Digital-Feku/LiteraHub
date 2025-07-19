@@ -1,17 +1,23 @@
-// document.getElementById('authForm').addEventListener('submit', async (event) => {
-//     event.preventDefault();
 
+// document.getElementById('regForm').addEventListener('submit', async (event) => {
+//     event.preventDefault(); 
 
 //     const email = document.getElementById('email').value;
 //     const password = document.getElementById('password').value;
+//     const confirmPassword = document.getElementById('confirmPassword').value;
+
+//     if (password !== confirmPassword) {
+//         alert('Пароли не совпадают');
+//         return;
+//     }
 
 //     const userData = {
-//         username: email,
-//         password: password
+//         username: email, 
+//         password: password,
 //     };
 
 //     try {
-//         const response = await fetch('api/users/auth', {
+//         const response = await fetch('/api/users/register', {
 //             method: 'POST',
 //             headers: {
 //                 'Content-Type': 'application/json',
@@ -25,8 +31,9 @@
 //         }
 
 //         const result = await response.json();
-//         // куда редирект? redirect('/pages/auth.html')
+//         alert(result.message); 
+//         redirect('/pages/auth.html');
 //     } catch (error) {
-//         alert(error.message)
+//         alert(error.message); 
 //     }
-// })
+// });
